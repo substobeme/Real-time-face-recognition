@@ -8,4 +8,4 @@ recognized, updates in a database(MySQL) with the date and time the user was det
 • This project can be used to provide effective real-time face recognition for security applications by accurately tracking
 and logging individuals.
 
-![image](https://github.com/user-attachments/assets/af150a0a-b7cc-483b-b846-d3fbf215de27)
+![image](https://github.com/user-attachments/assets/a75b5db9-213b-42f6-ac75-c104daf35b5b)
