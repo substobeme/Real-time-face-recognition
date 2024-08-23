@@ -9,3 +9,5 @@ recognized, updates in a database(MySQL) with the date and time the user was det
 and logging individuals.
 
 ![image](https://github.com/user-attachments/assets/a75b5db9-213b-42f6-ac75-c104daf35b5b)
+
+![image](https://github.com/user-attachments/assets/676b4f4d-0d3b-451e-8248-6c679931eede)
