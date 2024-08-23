@@ -37,7 +37,7 @@ while True:
     for (x, y, w, h) in faces:
 
         face_region = frame[y:y + h, x:x + w]
-        face_gray = cv2.cvtColor(face_region, cv2.COLOR_BGR2GRAY)
+        
 
 
 
