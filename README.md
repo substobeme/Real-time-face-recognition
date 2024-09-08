@@ -11,9 +11,12 @@ and logging individuals.
 
 ## Video Feed
 Here is a demonstration of the recognizition process.
+
+
 ![image](https://github.com/user-attachments/assets/a75b5db9-213b-42f6-ac75-c104daf35b5b)
 
 ## Database and Flast Webapp
-Given below is a visual from the flask webapp and the database
+Given below is a showcase of the webapp displaying the database, with options to view all records or records of a specific person of interest.
+
+
 ![Database image](https://github.com/user-attachments/assets/e9c306a3-ae32-4bb1-9ed5-4f09983222de)
-![image](https://github.com/user-attachments/assets/676b4f4d-0d3b-451e-8248-6c679931eede)
