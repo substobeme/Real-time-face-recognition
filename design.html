@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Records</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner {
+            background-color: #8B0000;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+       }
+
+        .banner h1 {
+            margin: 10;
+            font-size: 35px;
+        }
+
+        .home-icon {
+            font-size: 35px;
+            cursor: pointer;
+        }
+
+        .record-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+            padding: 20px;
+        }
+
+        .record-box {
+            background-color: #006400;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            margin: 0;
+        }
+
+        .record-box img {
+            max-width: 90%;
+            height: auto;
+            border: 5px solid orange;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <h1>DATABASE OF THE CAPTURED FACES</h1>
+        <span class="home-icon">&#8962;</span>
+    </div>
+
+    <div class="record-container">
+        {% for record in records %}
+        <div class="record-box">
+            <img src="data:image/jpeg;base64,{{ record[3] }}" alt="Face Image">
+            <p>Name: {{ record[1] }}</p>
+            <p>Time: {{ record[2] }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <script>
+        document.querySelector('.home-icon').addEventListener('click', function() {
+            window.close();
+        });
+    </script>
+</body>
+</html>
