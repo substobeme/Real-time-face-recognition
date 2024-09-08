@@ -8,6 +8,43 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: #8B0000;
+            color: white;
+            width: 200px;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            height: 100%;
+            top: 0;
+            overflow-y: auto;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            background-color: #6A0DAD;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #8B008B;
+        }
+
+        .sidebar a.active {
+            background-color: #8B008B;
+        }
+
+        .main-content {
+            margin-left: 220px;
+            flex-grow: 1;
         }
 
         .banner {
@@ -17,18 +54,22 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 100%;
             box-sizing: border-box;
-       }
+            border-bottom: none;
+        }
 
         .banner h1 {
-            margin: 10;
+            margin: 0;
             font-size: 35px;
+            margin-left: 20px;
         }
 
         .home-icon {
-            font-size: 35px;
+            width: 35px;
+            height: 35px;
             cursor: pointer;
+            color: white;
+            margin-right: 20px; 
         }
 
         .record-container {
@@ -36,6 +77,7 @@
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             grid-gap: 20px;
             padding: 20px;
+            margin-top: 10px;
         }
 
         .record-box {
@@ -59,25 +101,30 @@
     </style>
 </head>
 <body>
-    <div class="banner">
-        <h1>DATABASE OF THE CAPTURED FACES</h1>
-        <span class="home-icon">&#8962;</span>
+    <div class="sidebar">
+        <a href="/" {% if request.path == '/' %}class="active"{% endif %}>All Records</a>
+        <a href="/subha" {% if request.path == '/subha' %}class="active"{% endif %}>Subha</a>
+        <a href="/akash" {% if request.path == '/akash' %}class="active"{% endif %}>Akash</a>
+        <a href="/ashutosh" {% if request.path == '/ashutosh' %}class="active"{% endif %}>Ashutosh</a>
     </div>
 
-    <div class="record-container">
-        {% for record in records %}
-        <div class="record-box">
-            <img src="data:image/jpeg;base64,{{ record[3] }}" alt="Face Image">
-            <p>Name: {{ record[1] }}</p>
-            <p>Time: {{ record[2] }}</p>
+    <div class="main-content">
+        <div class="banner">
+            <h1>DATABASE OF THE CAPTURED FACES</h1>
+            <a href="/" class="home-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24"><path d="M12 3l10 9h-3v9h-7v-6h-4v6H5v-9H2l10-9z"/></svg>
+            </a>
         </div>
-        {% endfor %}
-    </div>
 
-    <script>
-        document.querySelector('.home-icon').addEventListener('click', function() {
-            window.close();
-        });
-    </script>
+        <div class="record-container">
+            {% for record in records %}
+            <div class="record-box">
+                <img src="data:image/jpeg;base64,{{ record[3] }}" alt="Face Image">
+                <p>Name: {{ record[1] }}</p>
+                <p>Time: {{ record[2] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>
