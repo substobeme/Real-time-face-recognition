@@ -19,4 +19,4 @@ Here is a demonstration of the recognizition process.
 Given below is a showcase of the webapp displaying the database, with options to view all records or records of a specific person of interest.
 
 
-![Database image](https://github.com/user-attachments/assets/e9c306a3-ae32-4bb1-9ed5-4f09983222de)
+![DB2](https://github.com/user-attachments/assets/2c55bd77-7313-442d-a4fe-1676f697d8c7)
