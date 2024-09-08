@@ -15,5 +15,5 @@ Here is a demonstration of the recognizition process.
 
 ## Database and Flast Webapp
 Given below is a visual from the flask webapp and the database
-
+![Database image](https://github.com/user-attachments/assets/e9c306a3-ae32-4bb1-9ed5-4f09983222de)
 ![image](https://github.com/user-attachments/assets/676b4f4d-0d3b-451e-8248-6c679931eede)
