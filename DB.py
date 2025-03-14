@@ -9,7 +9,7 @@ def index():
     db_connection = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="#12#ASUS#SUBS#1",
+        password="&&&&&&&",
         database="face_info"
     )
     cursor = db_connection.cursor()
